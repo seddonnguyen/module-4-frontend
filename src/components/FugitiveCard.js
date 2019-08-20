@@ -104,8 +104,8 @@ export default class FugitiveCard extends Component {
 
     return (
       <div className="row">
-      <div className="col-sm-12">
-        <div className="card">
+      <div className="col">
+        <div className="card m-2">
           <div className="card-header">
             <h4>{fugitive.name}</h4>
           </div>
