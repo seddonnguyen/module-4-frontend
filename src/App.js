@@ -3,7 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import FugitiveCard from './components/FugitiveCard'
 import EditFugitive from './components/EditFugitive'
 import AddFugitive from './components/AddFugitive'
 import AppNotFound from './components/AppNotFound'
