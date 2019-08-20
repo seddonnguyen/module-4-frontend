@@ -25,8 +25,18 @@ class App extends Component {
     })
   }
 
+  updateFugitives = () => {
+    fetch('http://localhost:3000/fugitives')
+    .then(response => response.json())
+    .then(response => {
+      this.setState({
+        fugitives: response
+      })
+    })
+  }
+
   displayFugitives = () => {
-    return this.state.fugitives.map(fugitive => <FugitiveCard key={fugitive.id} fugitive={fugitive}/>)
+    return this.state.fugitives.map(fugitive => <FugitiveCard key={fugitive.id} fugitive={fugitive} updateFugitives={this.updateFugitives}/>)
   }
 
   render() {
