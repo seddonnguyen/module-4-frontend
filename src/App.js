@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import FugitiveCard from './components/FugitiveCard'
 import EditFugitive from './components/EditFugitive'
+import AddFugitive from './components/AddFugitive'
 
 class App extends Component {
 
@@ -12,7 +13,8 @@ class App extends Component {
     super();
     this.state = {
       fugitives: [],
-      fugitive: {}
+      fugitive: {},
+      newFugitive: false
     }
   }
 
@@ -22,9 +24,7 @@ class App extends Component {
     .then(response => response.json())
     .then(response => {
       this.setState({
-        fugitives: response,
-        fugitive: {},
-        newFugitive: false
+        fugitives: response
       })
     })
   }
@@ -57,19 +57,30 @@ class App extends Component {
     })
   }
 
+  handleAddFugitive = () => {
+    this.setState({
+      newFugitive: true
+    });
+  }
+
   displayView = () => {
     if(!this.state.fugitive.id && !this.state.newFugitive) {
       return (
-              <div className="card-deck">
-                {this.displayFugitives()}
-              </div>
-              );
+        <div>
+          <button className="btn btn-primary m-2" onClick={this.handleAddFugitive}>Add Fugitive</button>
+          <div className="card-deck">
+            {this.displayFugitives()}
+          </div>
+        </div>
+        );
     }
     else if (this.state.newFugitive) {
-
+      return <AddFugitive
+          backToMain={this.resetFugitive}
+          updateFugitive={this.resetFugitive}
+        />
     }
     else {
-          console.log(this.state.fugitive)
       return <EditFugitive
                 fugitive={this.state.fugitive}
                 backToMain={this.resetFugitive}
