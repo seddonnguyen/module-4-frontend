@@ -114,7 +114,7 @@ export default class FugitiveCard extends Component {
           <div className="card-body" key={fugitive.id}>
             <button onClick={() => editFugitive(fugitive)} className="btn btn-primary m-2">Edit</button>
             <button onClick={this.deleteFugitive} className="btn btn-primary m-2">Delete</button>
-            <p className="card-text"> Charge(s):</p>
+            <p className="card-text"> Charge:</p>
             {this.displayCharges()}
             <div className="form-group">
               <form className="form-inline" onSubmit={this.handleChargeSubmit}>
@@ -122,7 +122,7 @@ export default class FugitiveCard extends Component {
                 <button type="submit" className="btn btn-primary m-2">Add</button>
               </form>
             </div>
-            <p className="card-text"> Aliases:</p>
+            <p className="card-text"> Alias:</p>
              {this.displayAliases()}
             <div className="form-group">
               <form className="form-inline" onSubmit={this.handleAliasSubmit}>
