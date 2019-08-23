@@ -75,7 +75,7 @@ export default class EditFugitive extends Component {
   }
 
   handleSaveSubmit = event => {
-    const url = `http://localhost:3000/fugitives/${this.props.fugitive.id}`
+    const url = `https://obscure-mesa-62718.herokuapp.com/fugitives/${this.props.fugitive.id}`
 
     event.preventDefault();
 

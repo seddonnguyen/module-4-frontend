@@ -73,7 +73,7 @@ export default class AddFugitive extends Component {
   }
 
   handleSaveSubmit = event => {
-    const url = "http://localhost:3000/fugitives/"
+    const url = "https://obscure-mesa-62718.herokuapp.com/fugitives/"
 
     event.preventDefault();
 

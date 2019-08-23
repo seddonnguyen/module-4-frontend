@@ -22,7 +22,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    fetch('http://localhost:3000/fugitives')
+    fetch('https://obscure-mesa-62718.herokuapp.com/fugitives')
     .then(response => response.json())
     .then(response => {
       this.setState({
@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   resetFugitive = () => {
-    fetch('http://localhost:3000/fugitives')
+    fetch('https://obscure-mesa-62718.herokuapp.com/fugitives')
     .then(response => response.json())
     .then(response => {
       this.setState({

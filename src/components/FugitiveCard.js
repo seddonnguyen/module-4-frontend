@@ -33,7 +33,7 @@ export default class FugitiveCard extends Component {
   }
 
   handleChargeSubmit = event => {
-    const url = "http://localhost:3000/charges"
+    const url = "https://obscure-mesa-62718.herokuapp.com/charges"
 
     event.preventDefault();
 
@@ -57,7 +57,7 @@ export default class FugitiveCard extends Component {
   }
 
   deleteFugitive = event => {
-    const url = "http://localhost:3000/fugitives"
+    const url = "https://obscure-mesa-62718.herokuapp.com/fugitives"
 
     fetch(`${url}/${this.props.fugitive.id}`, {
       method: "DELETE",
@@ -76,7 +76,7 @@ export default class FugitiveCard extends Component {
   }
 
   handleAliasSubmit = event => {
-    const url = "http://localhost:3000/aliases"
+    const url = "https://obscure-mesa-62718.herokuapp.com/aliases"
 
     event.preventDefault();
 
