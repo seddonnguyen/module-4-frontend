@@ -1,6 +1,5 @@
-Most Wanted is a website of a listing of most wanted fugitive.
+Most Wanted is a website that provides a list of the highly sought fugitives.
 
-Most Wanted's frontend was created with React. 
-Most Wanted's backend was created with Ruby on Rails, visit https://github.com/seddonnguyen/module-4-backend
+Most Wanted's frontend. Made with React. To start the frontend, type `npm start` in the console. To run the Most Wanted's backend, visit https://github.com/seddonnguyen/module-4-backend
 
 Visit the demo here: https://stark-sierra-36956.herokuapp.com/
